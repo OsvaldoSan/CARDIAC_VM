@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="793.0" prefWidth="1137.0" stylesheets="@styles_to_cardiac.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <BorderPane fx:id="principalBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="793.0" prefWidth="1137.0" stylesheets="@styles_to_cardiac.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" styleClass="upper_bar" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="171.0" spacing="3.0" styleClass="upper_bar">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../media/home.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="gBackHome" mnemonicParsing="false" onAction="#changeStages" text="CARDIAC Systems" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="889.0" spacing="35.0" styleClass="upper_bar">
+                     <children>
+                        <Button fx:id="gStartStop" mnemonicParsing="false" onAction="#controlBar" text="Start" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="gPause" mnemonicParsing="false" onAction="#controlBar" text="Pause" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="gRestart" mnemonicParsing="false" onAction="#controlBar" text="Restart" HBox.hgrow="ALWAYS" />
+                        <ChoiceBox fx:id="architecture" prefHeight="20.0" prefWidth="90.0" />
+                        <ChoiceBox fx:id="tempos" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children></HBox>
+         </top>
+         <left>
+            <VBox fx:id="vBoxLeftSide" alignment="TOP_CENTER" prefHeight="755.0" prefWidth="275.0" styleClass="left_center_back" stylesheets="@styles_to_cardiac.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane fx:id="titleCPU" animated="false" text="Central Processing Unit" textFill="#bcb7b7" VBox.vgrow="ALWAYS">
+                    <content>
+                      <AnchorPane fx:id="anchorCPU">
+                           <children>
+                              <ScrollPane fx:id="scrollCPU" fitToHeight="true" fitToWidth="true" styleClass="edge-to-edge" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <content>
+                                    <GridPane fx:id="gridPCPU" alignment="CENTER" gridLinesVisible="true" hgap="10.0" stylesheets="@styles_to_cardiac.css" vgap="10.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="145.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="90.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </opaqueInsets>
+                                       <children>
+                                          <Label minHeight="20.0" prefHeight="20.0" text="Instruction Register">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label minHeight="20.0" prefHeight="20.0" text="Operational Code" GridPane.rowIndex="1" />
+                                          <Label minHeight="20.0" prefHeight="20.0" text="Operand" GridPane.rowIndex="2" />
+                                          <Label minHeight="20.0" text="Program Counter" GridPane.rowIndex="3" />
+                                          <Label minHeight="20.0" text="Accumulator" GridPane.rowIndex="4" />
+                                          <Label id="labelNumeric" fx:id="gInReg" alignment="BOTTOM_LEFT" text="null" GridPane.columnIndex="1" />
+                                          <Label id="labelNumeric" fx:id="gOpCode" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label id="labelNumeric" fx:id="gOperand" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label id="labelNumeric" fx:id="gPc" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label id="labelNumeric" fx:id="gAcc" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Label minHeight="20.0" text="Negative" GridPane.rowIndex="5" />
+                                          <Label id="labelNumeric" fx:id="gNegative" text="False" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <HBox alignment="CENTER" prefHeight="15.0" prefWidth="22.0" stylesheets="@styles_to_cardiac.css">
+                           <padding>
+                              <Insets right="1.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="HBoxLlaveImage" />
+                              <String fx:value="HBoxBinary" />
+                           </styleClass>
+                        </HBox>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Machinne Status" VBox.vgrow="ALWAYS">
+                    <content>
+                      <AnchorPane minWidth="0.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="12.0" layoutY="12.0" styleClass="edge-to-edge" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+                                 <content>
+                                    <GridPane fx:id="gridPMachineStatus" alignment="CENTER" gridLinesVisible="true" hgap="10.0" stylesheets="@styles_to_cardiac.css" vgap="10.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="gDescriptionOperation" minHeight="20.0" style="-fx-min-height: 20px;" styleClass="labelspecialb" text="Operation">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin></Label>
+                                          <Label fx:id="gDescriptionCycle" minHeight="20.0" style="-fx-min-height: 20px;" styleClass="labelspecialb" text="Cycle" GridPane.rowIndex="1" />
+                                          <Label minHeight="20.0" style="-fx-min-height: 20px;" text="Status" GridPane.rowIndex="2" />
+                                          <Label id="labelNumeric" fx:id="gOperation" maxHeight="20.0" minHeight="20.0" prefHeight="20.0" GridPane.columnIndex="1" />
+                                          <Label id="labelNumeric" fx:id="gCycleNumber" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label id="labelNumeric" fx:id="gCardiacStatus" text="Off" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </opaqueInsets>
+                                    </GridPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <HBox prefHeight="12.0" prefWidth="20.0" styleClass="HBoxSetUpMachine" />
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane fx:id="titledOutput" text="Output" VBox.vgrow="NEVER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+                                 <children>
+                                    <ListView fx:id="outputCardsList" prefHeight="200.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </ListView>
+                                    <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                       <children>
+                                          <Label fx:id="gStatusDownload" alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="120.0" />
+                                          <Button fx:id="gDownloadOutput" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#downloadOutput" prefHeight="25.0" prefWidth="118.0" text="Download">
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" right="5.0" top="2.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets left="10.0" right="10.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <HBox prefHeight="15.0" prefWidth="17.0" styleClass="HBoxOUTPUT" />
+                     </graphic>
+                  </TitledPane>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding></VBox>
+         </left>
+         <bottom>
+            <HBox fx:id="HBoxBottom" alignment="CENTER" prefHeight="208.0" prefWidth="866.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane fx:id="bottomQueue" animated="false" maxWidth="287.0" prefHeight="204.0" prefWidth="271.0" text="Queue" HBox.hgrow="NEVER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane fx:id="stackCardsInWaitingList" layoutX="-26.0" layoutY="-37.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TabPane fx:id="bottomTabPane" prefHeight="204.0" prefWidth="687.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+                    <tabs>
+                      <Tab text="Deck Mode">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="417.0">
+                                 <children>
+                                    <VBox layoutX="51.0" layoutY="-51.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                       <children>
+                                          <TextArea fx:id="gDeckText" accessibleRole="LIST_VIEW" prefHeight="200.0" prefWidth="200.0" promptText="Write out your card here" />
+                                          <Button fx:id="gAddCard" mnemonicParsing="false" onAction="#execution" text="Add Card">
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="5.0" top="2.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Terminal Mode">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" layoutX="86.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                       <children>
+                                          <Label fx:id="gTerminalNote" prefHeight="28.0" prefWidth="309.0" text="Ingresa texto" />
+                                          <TextField fx:id="gTerminalText" prefHeight="29.0" prefWidth="180.0" />
+                                          <Button fx:id="gTerminalRun" mnemonicParsing="false" onAction="#execution" text="Run" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TabPane>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <ScrollPane fx:id="scrollMemory" prefHeight="200.0" prefWidth="200.0" styleClass="edge-to-edge" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                    </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

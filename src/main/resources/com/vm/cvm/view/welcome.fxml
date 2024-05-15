@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="600.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@styles_to_cardiac.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vm.cvm.controller.Welcome">
+   <center>
+      <VBox alignment="CENTER" prefHeight="370.0" prefWidth="496.0" spacing="70.0" stylesheets="@styles_to_cardiac.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                  <Button fx:id="gCardiac" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC" />
+                  <Button mnemonicParsing="false" text="Instructions" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                  <Button fx:id="gCardiacSync" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC C" />
+                  <Button mnemonicParsing="false" text="Instructions" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="195.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                  <Button fx:id="gCardiacPar" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC PC" />
+                  <Button mnemonicParsing="false" text="Instructions" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="800.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/creative-commons.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="36.0" prefWidth="290.0" text="Licenced by Creative Commons" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="5.0" top="5.0" />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+</BorderPane>

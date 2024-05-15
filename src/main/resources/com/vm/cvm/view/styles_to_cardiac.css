@@ -1,0 +1,372 @@
+/* -------------------------------------------------------- Predefined styles -------------------------------------------------------------*/
+
+.root{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Loto Black";
+    -fx-background: rgb(12,11,11);
+}
+
+/* -----------------------------------------  Panes  ----------------------------------------*/
+
+/* ----------- Titled Pane -------------*/
+.titled-pane > .title 
+{
+	-fx-background-color: linear-gradient(rgba(0,0,0,1) 5%, rgba(26,28,27,1) 28%, rgba(36,33,34,1) 77%);
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+}
+
+.titled-pane{
+	-fx-padding: 1px 5px 5px 5px ;	
+	-fx-text-fill: white;
+}
+
+.titled-pane  > .content
+{
+	-fx-border-width:0;
+	 
+}
+
+
+/* ------------- Tab Pane ------------------ */
+
+.tab:selected {
+	-fx-background-color: linear-gradient(rgba(0,0,0,1) 5%, rgba(26,28,27,1) 28%, rgba(36,33,34,1) 77%);
+	
+}
+
+.tab:hover{
+	-fx-cursor:hand;
+	-fx-background-color:linear-gradient( rgba(136,136,136,1) 18%, rgba(169,172,170,1) 34%, rgba(142,141,140,1) 76% );
+}
+
+.tab{
+	-fx-background-color:#424242;
+	-fx-text-fill:blue;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+  -fx-background-color:transparent;
+}
+
+.tab-label{
+	-fx-text-fill:white;
+}
+
+/*--------------- Scroll Pane ------------------*/
+
+.scroll-pane, scroll-bar{
+	-fx-border-style:none;
+	-fx-background-color:  #8db8e8 ;
+}
+/* General scroll style*/
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+	 -fx-background-color:  #302d2d ;
+	 -fx-background-radius: 5px;
+	 -fx-padding: 5px;
+
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color:  #514e4e ;
+    -fx-background-radius: 5px;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: #0e0e0e;
+    -fx-border-color: #0e0e0e;
+    
+}
+
+.increment-arrow, .decrement-arrow{
+	-fx-background-color:#7f7b7a;
+
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color:  #0e0e0e;
+    -fx-background-radius: 0em;
+
+}
+
+.scroll-pane, .corner{
+    -fx-background-color:  #0e0e0e;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+	-fx-background-color:  #0e0e0e ;
+}
+
+/* -------------- Grid Pane ---------------- */
+
+GridPane {
+    -fx-background-insets: 0.0 5.0 0.0 10.0;
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/* --------------------------------------- TableView -------------------------------------------------------------------- */
+
+.table-view{
+	-fx-background-color:#0e0e0e;
+    -fx-background-insets: 2px 18px 1px 0px;
+
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+	-fx-background-color: linear-gradient( rgba(82,82,82,1) 16%, rgba(101,91,91,1) 51%, rgba(71,71,71,1) 84%);
+
+    -fx-background-radius: 7px 7px 5px 5px;
+    -fx-background-insets: 2px 18px 1px 0px;
+    -fx-padding: 1px 1px 1px 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+
+
+/* --------------------------------------------------- Controlls ------------------------------------------- */
+
+.button{
+    -fx-text-fill: black;
+    -fx-font-size: 9.5pt;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(rgba(163,161,161,1) 5%, rgba(146,153,149,1) 33%, rgba(107,100,100,1) 80%);
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+    -fx-border-radius: 10;
+    -fx-background-radius: 15;
+    -fx-padding: 5;    
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient( rgba(180,180,180,1) 18%, rgba(169,172,170,1) 50%, rgba(142,141,140,1) 82% );
+    -fx-cursor: hand;    
+}
+
+/* -------------------------- Text ------------------------------  */
+.text-area:focused {
+	-fx-font-style: normal;
+	-fx-text-fill:gray;
+
+}
+
+.text-area{
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 5.0, 5.0);
+	-fx-prompt-text-fill:linear-gradient(rgba(163,161,161,1) 18%, rgba(151,156,153,1) 31%, rgba(146,153,149,1) 49%, rgba(107,100,100,1) 83%, rgba(123,121,120,1) 88%);;
+	-fx-font-style: italic;
+}
+
+
+.text-area .content{
+	-fx-background-color:black;
+
+}
+
+.normalText{
+    -fx-font-size: 8pt;
+    -fx-font-family: "Loto Black";
+    -fx-background: rgb(12,11,11);
+
+}
+
+
+
+/* ------------ Label --------------- */
+Label{
+    -fx-font-size: 9pt;
+    -fx-font-family: "Loto Black";
+    -fx-padding: 0 0  1px 10px;/* arriba- derecha -abajo-izquierda*/
+    -fx-alignment: center ;
+    -fx-text-align: center;
+     -fx-min-width: 50px; /* Minimum width */
+    -fx-min-height: 20px; /* Minimum height */
+
+
+    /* Add margin */
+    -fx-margin: 5px;
+
+}
+
+.labelspecialb{
+    -fx-font-size: 9pt;
+    -fx-font-family: "Loto Black";
+    -fx-padding: 0 0  1px 10px;/* arriba- derecha -abajo-izquierda*/
+    -fx-alignment: center ;
+    -fx-text-align: center;
+     -fx-min-width: 50px; /* Minimum width */
+    -fx-min-height: 20px; /* Minimum height */
+
+
+    /* Add margin */
+    -fx-margin: 5px;
+
+
+}
+
+
+/* ----------- Borders -------------------------*/
+/* No hay bordes*/
+.borders{
+    -fx-border-color: blue;
+    -fx-border-style: dotted;
+    -fx-border-width: 2.5;
+    -fx-border-insets: -5;
+}
+
+
+
+
+
+/* Specific parts of layout Cardiac*/
+
+
+.left_center_back{
+    -fx-border-color: rgb(0, 0, 0);
+    -fx-border-style: hidden solid solid;
+    -fx-border-width: 1.5;
+    -fx-border-insets: 0;
+}
+
+.upper_bar{
+    -fx-background-color: linear-gradient(rgba(0,0,0,1) 5%, rgba(26,28,27,1) 28%, rgba(36,33,34,1) 77%);
+    -fx-border-width: 1.5;
+    -fx-border-insets: 1;
+
+}
+
+/* ------------------------------------ Images ---------------------------*/
+
+.HBoxBinary{
+   -fx-background-image: url("resources/images/binary.png");
+   -fx-background-color:white;
+   -fx-background-repeat: stretch;   
+   -fx-background-size: 15 15;
+   -fx-background-position: center; 
+   -fx-padding: 1px 1px 1px 1px;
+}
+
+.HBoxSetUpMachine{
+   -fx-background-image: url("resources/images/setup_machine.png");
+   -fx-background-color:white;
+   -fx-background-repeat: stretch;   
+   -fx-background-size: 15 15;
+   -fx-background-position: center; 
+   -fx-padding: 1px 1px 1px 1px;
+}
+
+
+.HBoxOUTPUT{
+   -fx-background-image: url("resources/images/arrow_right.png");
+   -fx-background-color:white;
+   -fx-background-repeat: stretch;   
+   -fx-background-size: 15 15;
+   -fx-background-position: center; 
+   -fx-padding: 1px 1px 1px 1px;
+}
+
+
+
+
+
+/* Id Styles*/
+
+#labelNumeric{
+    -fx-alignment: center;
+    -fx-max-width: Infinity;
+}
+
+
+/*--------------------------------------------------------- Diseño del Grid de la memoria principal ---------------------------------------------------------*/
+/* + Añadido desde Java: Se añade en el objeto grid*/
+.grid {
+    -fx-background-radius: 5.0;
+    -fx-background-insets: 0.0 5.0 0.0 5.0;
+    -fx-padding: 10;
+    -fx-vgrow-policy:always;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-border-color:  #b9c4c4; /*Need to work with the board*/
+    -fx-border-width: 3px;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+}
+
+/* + Añadido desde Java: Se añade en la lista de objetos de Stack Pane llamado itemsDirection */
+.itemDirection{
+    -fx-background-color:  #8e9090    ;
+     -fx-background-radius: 5.0;
+     -fx-background-insets: 0.5 5.0 0.5 5.0;
+     -fx-padding: 10;
+     -fx-hgap: 8;
+     -fx-vgap: 8;
+}
+
+/* + Añadido desde Java: Se añade en el metodo de Change PC para cambiar el tono del item seleccionado sobre el Stack Pane*/
+.itemDirectionSelected{
+     -fx-background-color:   #4f5d5d    ;
+     -fx-background-radius: 5.0;
+     -fx-background-insets: 0.5 5.0 0.5 5.0;
+     -fx-padding: 10;
+     -fx-hgap: 8;
+     -fx-vgap: 8;
+     -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+
+}
+
+
+
+/* + Añadido desde Java: es son distintivos para el pc de executer */
+/* + Añadido desde Java: Se añade en el metodo de Change PC para cambiar el tono del item seleccionado sobre el Stack Pane*/
+.itemDirectionSelectedExe{
+     -fx-background-color:    #c84806     ;
+     -fx-background-radius: 5.0;
+     -fx-background-insets: 0.5 5.0 0.5 5.0;
+     -fx-padding: 10;
+     -fx-hgap: 8;
+     -fx-vgap: 8;
+     -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+
+}
+
+
+
+
+/* + Añadido desde Java: En la lista de etiquetas para el grid, gDirectionMemory en el metodo de la creación de la memoria*/
+.labelDirection{
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+   -fx-font-family: "Arial Black";
+}
+
+/* + Añadido desde Java: En la lista de objetos Stack Pane para los itemContent en el metodo de la creación de memoria*/
+.itemContent{
+    -fx-background-color:  #c4cdcc ;
+    -fx-background-radius: 5.0;
+    -fx-background-insets: 0.5 5.0 0.5 5.0;
+    -fx-padding: 10;
+    -fx-hgap: 8;
+    -fx-vgap: 8;
+}
+/* + Añadido desde Java:En la lista de etiquetas gContentMemory*/
+.labelContent{
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-text-fill:black;
+	-fx-font-weight:bold;
+}
+
