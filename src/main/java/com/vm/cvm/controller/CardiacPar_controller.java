@@ -73,7 +73,7 @@ public class CardiacPar_controller extends  CardiacSync_controller{
     @FXML
     public void editMachineStatus(){
         // It is used this method to update the path of the SO
-        fileNameSO="/home/mrblue/Documents/Proyectos/Tesis_MAC/Cardiac_VM/src/modelo/Files/File_System_SO_Parallel.txt";
+        fileNameSO="/com/vm/cvm/Files/File_System_SO_Parallel.txt";
 
         // Update content of opertation and cycle
         gDescriptionCycle.setText("Cycle CPUL");

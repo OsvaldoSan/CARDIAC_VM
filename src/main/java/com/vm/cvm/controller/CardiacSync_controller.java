@@ -9,9 +9,9 @@ import javafx.scene.layout.*;
 import com.vm.cvm.modelo.CardiacSync;
 import com.vm.cvm.modelo.FileData;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
 public class CardiacSync_controller extends Cardiac {
 
 
-    protected String fileNameSO="/home/mrblue/Documents/Proyectos/Tesis_MAC/Cardiac_VM/src/modelo/Files/File_System_SO.txt";
+    public String fileNameSO="/com/vm/cvm/Files/File_System_SO.txt";
     // Design Variables
     @FXML
     protected GridPane gridPMachineStatus;
@@ -176,7 +176,13 @@ public class CardiacSync_controller extends Cardiac {
     private ObservableList<FileData> readFileAndCreateData(String fileName) throws IOException {
         ObservableList<FileData> data = FXCollections.observableArrayList();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        InputStream inputStream = getClass().getResourceAsStream(fileName);
+
+        try (
+                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+
+                //BufferedReader br = new BufferedReader(new FileReader(getClass().getResource(fileName)))
+        ) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] columns = line.split(",");

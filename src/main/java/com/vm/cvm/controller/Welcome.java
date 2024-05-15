@@ -8,8 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 public class Welcome {
 
@@ -35,6 +38,28 @@ public class Welcome {
             System.out.println("Go to E-CARDIAC Parallel");
             loadStage(FXMLVIEWFILE,vmButton,new CardiacPar_controller());
         }
+    }
+
+    @FXML
+    public void goLinkInstructions(ActionEvent newButton){
+    //The three buttons of instructions goes to github
+        String url = "https://github.com/OsvaldoSan/CARDIAC_VM/";
+        System.out.println("THe url is:"+url);
+
+        new Thread(() -> {
+
+            if (Desktop.isDesktopSupported()) {
+                Desktop desktop = Desktop.getDesktop();
+                try {
+                    desktop.browse(new URI(url));
+                } catch (IOException | URISyntaxException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("Desktop not supported.");
+            }
+        }).start();
+
     }
 
     public void loadStage(String fxmlPage, ActionEvent selectedVM, Object controller_selected){

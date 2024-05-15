@@ -16,19 +16,19 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
                <children>
                   <Button fx:id="gCardiac" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC" />
-                  <Button mnemonicParsing="false" text="Instructions" />
+                  <Button mnemonicParsing="false" onAction="#goLinkInstructions" text="Instructions" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
                <children>
                   <Button fx:id="gCardiacSync" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC C" />
-                  <Button mnemonicParsing="false" text="Instructions" />
+                  <Button mnemonicParsing="false" onAction="#goLinkInstructions" text="Instructions" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="195.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
                <children>
                   <Button fx:id="gCardiacPar" mnemonicParsing="false" onAction="#goVirtualMachine" prefHeight="25.0" prefWidth="161.0" text="E-CARDIAC PC" />
-                  <Button mnemonicParsing="false" text="Instructions" />
+                  <Button mnemonicParsing="false" onAction="#goLinkInstructions" text="Instructions" />
                </children>
             </HBox>
          </children>

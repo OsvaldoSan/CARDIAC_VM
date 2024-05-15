@@ -5,6 +5,7 @@ module com.vm.cvm {
 
     requires org.controlsfx.controls;
     requires java.sql;
+    requires java.desktop;
 
     opens com.vm.cvm to javafx.fxml;
     opens com.vm.cvm.controller;

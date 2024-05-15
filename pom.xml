@@ -69,10 +69,10 @@
                         <configuration>
                             <mainClass>com.vm.cvm/com.vm.cvm.Launcher</mainClass>
                             <compress>2</compress>
-                            <launcher>cvmExe</launcher>
-                            <jlinkZipName>cvm1</jlinkZipName>
-                            <jlinkImageName>cvm1</jlinkImageName>
-                            <noManPages>true</noManPages>
+                            <launcher>CVM.sh</launcher>
+                            <jlinkZipName>CVMExe</jlinkZipName>
+                            <jlinkImageName>CVM</jlinkImageName>
+                            <noManPages>False</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
                             <jlinkTarget>${jlinkTarget}</jlinkTarget>
@@ -81,5 +81,18 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.txt</include>
+                    <include>**/*.fxml</include>
+                    <include>**/*.css</include>
+                    <include>**/*.png</include>
+                    <include>**/*.jpg</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 </project>
