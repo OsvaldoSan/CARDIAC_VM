@@ -1,6 +1,8 @@
-# CARDIAC Virtual Machine: A didactic model of computing
+![image](https://github.com/user-attachments/assets/a863e5b3-9083-4933-a4a2-8d8323c879f6)# CARDIAC Virtual Machine: A didactic model of computing
 
 This is a virtual machine designed to explore concurrent and parallel computing using the renowned CARDIAC model, created by David Hagelbarger and Saul Fingerman.
+
+This application was created for the thesis: **CARDIAC: La evolución hacia un modelo concurrente y paralelo**, and is intended to assist any student who may need it.
 
 # How to use it
 
@@ -46,6 +48,21 @@ Instructions on how to use the virtual machine can be found in the PDF included 
 
 
 ### Binary Option: Windows
+
+If you use the Windows option, after downloading and extracting the file **CVM_Windows.zip**, you will see the following folders:
+
+![Folders inside CVM_Windows](media_g/folders_windows.png)
+
+These folders contain all the necessary information for the application to work correctly. To execute the application, go to the *bin* folder, where you will see several files. Look for the file named *CVM*, which is a Windows Batch File, as shown in the image:
+
+![Binary files for Windows](media_g/binary_files_windws.png)
+
+Once you have identified the file, simply double-click on it, and a *CMD* window will open, starting the main *CARDIAC* window.
+
+![Starting CARDIAC in Windows](media_g/starting_cardiac_windows.png)
+
+Instructions on how to use the virtual machine can be found in the PDF included in the repository. This PDF refers to the thesis for this project.
+
 
 ## Create an executable with the source Code
 
