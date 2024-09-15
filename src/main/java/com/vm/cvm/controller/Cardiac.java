@@ -1,3 +1,23 @@
+/*
+<CARDIAC Virtual Machine: a didactic model of computing>
+        Copyright (C) <2024>  <Martín Osvaldo Santos Soto>
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/
+
+        If you need any contact, please send an E-Mail to osvaldosantos823@gmail.com
+ >.
+*/
 package com.vm.cvm.controller;
 
 // There is an infinite cycle when there is a "load" form an empty element
