@@ -66,7 +66,9 @@ Instructions on how to use the virtual machine can be found in the PDF included 
 
 ## Create an executable with the source Code
 
-If you, instead, want to create an executable from the source code, you can do so. You just need to follow the rules of the framework [Apache Maven](https://maven.apache.org/), and edit the *pom* file to your specifications.
+If you would rather create an executable from the source code, you can do so. First, access the repository [CARDIAC_VM](https://github.com/OsvaldoSan/CARDIAC_VM) and clone the code.
+
+Then, simply follow the framework rules of [Apache Maven](https://maven.apache.org/) and edit the *pom* file to your specifications.
 
 Here is an example of how easy it is to deploy the application using Maven in the Linux terminal:
 
