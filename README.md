@@ -1,10 +1,10 @@
-![image](https://github.com/user-attachments/assets/a863e5b3-9083-4933-a4a2-8d8323c879f6)# CARDIAC Virtual Machine: A didactic model of computing
+# CARDIAC Virtual Machine: A didactic model of computing
 
 This is a virtual machine designed to explore concurrent and parallel computing using the renowned CARDIAC model, created by David Hagelbarger and Saul Fingerman.
 
 This application was created for the thesis: **CARDIAC: La evolución hacia un modelo concurrente y paralelo**, and is intended to assist any student who may need it.
 
-# How to use it
+# How to Use This Application
 
 ## Binary Option
 
