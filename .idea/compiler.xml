@@ -9,8 +9,5 @@
         <module name="cvm" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cvm" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

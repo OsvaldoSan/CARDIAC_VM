@@ -120,7 +120,7 @@
                         </HBox>
                      </graphic>
                   </TitledPane>
-                  <TitledPane animated="false" text="Machinne Status" VBox.vgrow="ALWAYS">
+                  <TitledPane animated="false" text="Machine Status" VBox.vgrow="ALWAYS">
                     <content>
                       <AnchorPane minWidth="0.0" prefWidth="200.0">
                            <children>
@@ -239,7 +239,7 @@
                                  <children>
                                     <HBox alignment="TOP_CENTER" layoutX="86.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
                                        <children>
-                                          <Label fx:id="gTerminalNote" prefHeight="28.0" prefWidth="309.0" text="Ingresa texto" />
+                                          <Label fx:id="gTerminalNote" prefHeight="28.0" prefWidth="309.0" text="Enter text" />
                                           <TextField fx:id="gTerminalText" prefHeight="29.0" prefWidth="180.0" />
                                           <Button fx:id="gTerminalRun" mnemonicParsing="false" onAction="#execution" text="Run" />
                                        </children>

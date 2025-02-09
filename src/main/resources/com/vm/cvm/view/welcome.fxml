@@ -39,10 +39,10 @@
          <children>
             <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../media/creative-commons.png" />
+                  <Image url="@../media/License_icon-gpl-2.svg" />
                </image>
             </ImageView>
-            <Label prefHeight="36.0" prefWidth="290.0" text="Licenced by Creative Commons" />
+            <Label prefHeight="36.0" prefWidth="290.0" text="GNU General Public License v3.0" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

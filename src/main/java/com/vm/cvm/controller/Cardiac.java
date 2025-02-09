@@ -289,7 +289,7 @@ public class Cardiac implements Initializable {
     public void changeStages(ActionEvent event){
         // Alert Class to confirm return
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText("If you return now you'll lose all progress");
+        alert.setContentText("If you return now you will lose all your progress");
 
         Object Button = event.getSource();
 
