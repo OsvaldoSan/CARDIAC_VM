@@ -87,7 +87,7 @@
                                                 <Insets />
                                              </GridPane.margin>
                                           </Label>
-                                          <Label minHeight="20.0" prefHeight="20.0" text="Operational Code" GridPane.rowIndex="1" />
+                                          <Label minHeight="20.0" prefHeight="20.0" text="Operation Code" GridPane.rowIndex="1" />
                                           <Label minHeight="20.0" prefHeight="20.0" text="Operand" GridPane.rowIndex="2" />
                                           <Label minHeight="20.0" text="Program Counter" GridPane.rowIndex="3" />
                                           <Label minHeight="20.0" text="Accumulator" GridPane.rowIndex="4" />

@@ -1,17 +1,24 @@
 package com.vm.cvm.controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.awt.Desktop;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 
 public class Welcome {
@@ -44,19 +51,40 @@ public class Welcome {
     public void goLinkInstructions(ActionEvent newButton){
     //The three buttons of instructions goes to github
         String url = "https://github.com/OsvaldoSan/CARDIAC_VM/";
-        System.out.println("THe url is:"+url);
+        System.out.println("The url is:"+url);
 
         new Thread(() -> {
+            try {
+                // Try to open browser
+                Process process = new ProcessBuilder("xdg-open", url).start();
 
-            if (Desktop.isDesktopSupported()) {
-                Desktop desktop = Desktop.getDesktop();
-                try {
-                    desktop.browse(new URI(url));
-                } catch (IOException | URISyntaxException e) {
-                    e.printStackTrace();
+                // Wait a short time to see if the process fails
+                boolean exited = process.waitFor(2, TimeUnit.SECONDS);
+
+                if (exited && process.exitValue() != 0) {
+                    throw new IOException("Process failed");
+
                 }
-            } else {
-                System.out.println("Desktop not supported.");
+            } catch (Exception e) {
+                // If browser fails, show alert on JavaFX thread
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Browser Not Available");
+                    alert.setHeaderText("Could not open web browser");
+                    alert.setContentText("You can copy the url "+ url);
+
+                    // Optional: Add copy to clipboard button
+                    ButtonType copyButton = new ButtonType("Copy URL");
+                    alert.getButtonTypes().add(copyButton);
+
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.isPresent() && result.get() == copyButton) {
+                        Clipboard clipboard = Clipboard.getSystemClipboard();
+                        ClipboardContent content = new ClipboardContent();
+                        content.putString(url);
+                        clipboard.setContent(content);
+                    }
+                });
             }
         }).start();
 

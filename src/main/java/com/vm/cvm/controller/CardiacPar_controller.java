@@ -28,10 +28,10 @@ public class CardiacPar_controller extends  CardiacSync_controller{
     public Label gOperation2= new Label(""),gCycleNumber2 = new Label(""),gWaiter = new Label("Stopped");
     public Label gInReg2= new Label(""),gOpCode2= new Label(""),gOperand2= new Label(""),gPc2= new Label(""),gAcc2= new Label(""),gNegative2= new Label("");
 
-    Label  descGInReg2= new Label("Instruction Register"),descGOpCode2=new Label("Operational Code"),descGOperand2=new Label("Operand"),descGAcc2=new Label("Accumulator"),
+    Label  descGInReg2= new Label("Instruction Register"),descGOpCode2=new Label("Operation Code"),descGOperand2=new Label("Operand"),descGAcc2=new Label("Accumulator"),
             descGPc2 =new Label("Program Counter"), descGNegative2=new Label("Negative");
 
-    Label descGWaiter=new Label("Waiter"), descGOperation2=new Label("Operation CPUE"),descGCycleNumber2 = new Label("Cycle CPUE");
+    Label descGWaiter=new Label("Sentinel"), descGOperation2=new Label("Operation CPUE"),descGCycleNumber2 = new Label("Cycle CPUE");
 
 
 
@@ -529,7 +529,7 @@ public class CardiacPar_controller extends  CardiacSync_controller{
             emergencyStop();
             return;
         }
-        if (validateRestrictions(pc2,opCode2,operand2) == true) {
+        if (validateRestrictions(pc2, opCode2, operand2)) {
             System.out.println(" The operation in memory has been accepted");
             switch (opCode2) {
                 case 0:
