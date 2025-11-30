@@ -6,7 +6,7 @@ This application was created for the thesis: **CARDIAC: La evolución hacia un m
 
 # How to Use This Application
 
-# Package option: The easiest way
+## Package option: The easiest way
 
 In this option you can go to the releases part of GitHub and look for the last realese. There you can find a **Debian package** to install, or a **Windows package**. The
 installation is as easy as any other package of your operating system.
