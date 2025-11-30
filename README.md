@@ -6,6 +6,12 @@ This application was created for the thesis: **CARDIAC: La evolución hacia un m
 
 # How to Use This Application
 
+# Package option: The easiest way
+
+In this option you can go to the releases part of GitHub and look for the last realese. There you can find a **Debian package** to install, or a **Windows package**. The
+installation is as easy as any other package of your operating system.
+If you want to go to the binary option, you can follow the instructions below.
+
 ## Binary Option
 
 To use this version on Windows or Linux, you need to install the most recent version of the Java Runtime Environment. You can find it at[java](https://www.java.com/en/).
