@@ -76,7 +76,7 @@ Here is an example of how easy it is to deploy the application using Maven in th
 
 One of the greatest things about using Maven to deploy the application is that depending on the operating system you use, it will create the corresponding binary file. So if you want a Windows binary, you will need to deploy the app in a Windows file system.
 
-For more information, visit [Apache Maven](https://maven.apache.org/).
+For more information, visit [Apache Maven](https://maven.apache.org/). For info of the icon go to <a href="https://www.flaticon.com/free-icons/pc" title="pc icons">Pc icons created by Freepik - Flaticon</a>.
 
 
 
